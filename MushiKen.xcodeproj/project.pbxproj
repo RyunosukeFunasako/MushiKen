@@ -11,6 +11,7 @@
 		78BC40382BBAFC6B00F0D002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BC40372BBAFC6B00F0D002 /* ContentView.swift */; };
 		78BC403A2BBAFC6C00F0D002 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78BC40392BBAFC6C00F0D002 /* Assets.xcassets */; };
 		78BC403D2BBAFC6C00F0D002 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78BC403C2BBAFC6C00F0D002 /* Preview Assets.xcassets */; };
+		78BC40442BBC089F00F0D002 /* MushikenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BC40432BBC089F00F0D002 /* MushikenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		78BC40372BBAFC6B00F0D002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		78BC40392BBAFC6C00F0D002 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78BC403C2BBAFC6C00F0D002 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		78BC40432BBC089F00F0D002 /* MushikenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MushikenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				78BC40352BBAFC6B00F0D002 /* MushiKenApp.swift */,
 				78BC40372BBAFC6B00F0D002 /* ContentView.swift */,
+				78BC40432BBC089F00F0D002 /* MushikenView.swift */,
 				78BC40392BBAFC6C00F0D002 /* Assets.xcassets */,
 				78BC403B2BBAFC6C00F0D002 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78BC40442BBC089F00F0D002 /* MushikenView.swift in Sources */,
 				78BC40382BBAFC6B00F0D002 /* ContentView.swift in Sources */,
 				78BC40362BBAFC6B00F0D002 /* MushiKenApp.swift in Sources */,
 			);
