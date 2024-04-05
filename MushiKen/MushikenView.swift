@@ -5,28 +5,66 @@ struct MushikenView: View {
     @State var cpuMushikenNumber  = 0
     @State var result = -1
     
+    var userHand: String {
+        switch userMushikenNumber {
+        case 1:
+            return "hebi"
+        case 2:
+            return "kaeru"
+        case 3:
+            return "namekuji"
+        default:
+            return "null"
+        }
+    }
+    
     var cpuHand: String {
         switch cpuMushikenNumber {
         case 1:
-            return "蛇"
+            return "cpu_hebi"
         case 2:
-            return "蛙"
+            return "cpu_kaeru"
         case 3:
-            return "蛞蝓"
+            return "cpu_namekuji"
         default:
-            return "未選択"
+            return "null"
         }
     }
     
     var body: some View {
         VStack {
-            Text("相手の手: \(cpuHand)")
-                .font(.title)
-                .padding()
+            Spacer()
             
-            Image("mushiken")
-                .resizable()
-                .scaledToFit()
+            if userMushikenNumber == 0 {
+                Image("mushiken")
+                    .resizable()
+                    .scaledToFit()
+            } else {
+                Image(cpuHand)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 300, height: 300)
+                
+                if result >= 0 {
+                    if result == 0 {
+                        Text("負け")
+                            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    } else if result == 1 {
+                        Text("勝ち")
+                            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    } else {
+                        Text("あいこ")
+                            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    }
+                }
+                
+                Image(userHand)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 300, height: 300)
+            }
+            
+            Spacer()
             
             HStack(spacing: 40) {
                 Button(action: {
@@ -65,16 +103,6 @@ struct MushikenView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: 100)
             .padding(.horizontal)
-    
-            if result >= 0 {
-                if result == 0 {
-                    Text("負け")
-                } else if result == 1 {
-                    Text("勝ち")
-                } else {
-                    Text("あいこ")
-                }
-            }
         }
     }
 }
